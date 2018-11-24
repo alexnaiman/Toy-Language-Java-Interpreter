@@ -1,0 +1,21 @@
+ExecutionStack:
+	v=2;
+	print(v);
+SymTable:
+Out:
+
+################
+ExecutionStack:
+	print(v);
+SymTable:
+	v::=2
+Out:
+
+################
+ExecutionStack:
+SymTable:
+	v::=2
+Out:
+	2
+
+################
