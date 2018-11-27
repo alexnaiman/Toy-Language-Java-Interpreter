@@ -1,9 +1,5 @@
 import Controller.Controller;
-import Model.Expression.ArithmeticExpression;
-import Model.Expression.BooleanExpression.GreaterExpression;
-import Model.Expression.ConstantExpression;
-import Model.Expression.ReadHeapExpression;
-import Model.Expression.VariableExpression;
+import Model.Expression.*;
 import Model.FileStatement.*;
 import Model.GeneralStatement.*;
 import Model.HeapStatement.NewStatement;
@@ -136,11 +132,24 @@ public class Main {
         IFileTable<Integer, FileData> fileTable8 = new FileTable<>();
         IHeap<Integer, Integer> heap8 = new CustomHeap<>(new IntHeapKeyGenerator());
 
-        IStatement ex8 = new CompoundStatement(new AssignmentStatement("a", new ConstantExpression(3)), new WhileStatement(new GreaterExpression(new VariableExpression("a"), new ConstantExpression(0)), new CompoundStatement(new PrintStatement(new VariableExpression("a")), new AssignmentStatement("a", new ArithmeticExpression('-', new VariableExpression("a"), new ConstantExpression(1))))));
+        IStatement ex8 = new CompoundStatement(new AssignmentStatement("a", new ConstantExpression(3)), new WhileStatement(new BooleanExpression(new VariableExpression("a"), new ConstantExpression(0), ">"), new CompoundStatement(new PrintStatement(new VariableExpression("a")), new AssignmentStatement("a", new ArithmeticExpression('-', new VariableExpression("a"), new ConstantExpression(1))))));
         ProgramState prg8 = new ProgramState(ex8, ExeStack8, SymTable8, Output8, fileTable8, heap8);
         Repository repo8 = new Repository("");
         repo8.add(prg8);
         Controller ctrl8 = new Controller(repo8);
+
+        IStack<IStatement> ExeStack9 = new CustomStack<>();
+        IDictionary<String, Integer> SymTable9 = new CustomDictionary<>();
+        IList<Integer> Output9 = new CustomList<>();
+        IFileTable<Integer, FileData> fileTable9 = new FileTable<>();
+        IHeap<Integer, Integer> heap9 = new CustomHeap<>(new IntHeapKeyGenerator());
+
+        IStatement ex9 = new CompoundStatement(new AssignmentStatement("a", new ConstantExpression(-2)), new WhileStatement(new BooleanExpression(new VariableExpression("a"), new ConstantExpression(0), "<"), new CompoundStatement(new PrintStatement(new VariableExpression("a")), new AssignmentStatement("a", new ArithmeticExpression('+', new VariableExpression("a"), new ConstantExpression(1))))));
+        ProgramState prg9 = new ProgramState(ex9, ExeStack9, SymTable9, Output9, fileTable9, heap9);
+        Repository repo9 = new Repository("");
+        repo9.add(prg9);
+        Controller ctrl9 = new Controller(repo9);
+
 
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
@@ -150,6 +159,7 @@ public class Main {
         menu.addCommand(new RunCommand("4", ex6.toString(), ctrl6));
         menu.addCommand(new RunCommand("5", ex7.toString(), ctrl7));
         menu.addCommand(new RunCommand("6", ex8.toString(), ctrl8));
+        menu.addCommand(new RunCommand("7", ex9.toString(), ctrl9));
         menu.show();
 
     }
