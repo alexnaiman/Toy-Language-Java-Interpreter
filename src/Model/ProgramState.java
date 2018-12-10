@@ -7,15 +7,16 @@ import Model.Utils.IDictionary;
 import Model.Utils.IHeap;
 import Model.Utils.IList;
 import Model.Utils.IStack;
-
+import Exception.StatementExecutionError;
 
 public class ProgramState {
-    IStatement originalProgram;
+    private IStatement originalProgram;
     private IStack<IStatement> executionStack;
     private IDictionary<String, Integer> symTable;
     private IList<Integer> out;
     private IFileTable<Integer, FileData> fileTable;
     private IHeap<Integer, Integer> heap;
+    private int id;
 
     public ProgramState(IStack<IStatement> executionStack, IDictionary<String, Integer> symTable, IList<Integer> out, IStatement originalProgram, IHeap<Integer, Integer> heap) {
         this.executionStack = executionStack;
@@ -41,9 +42,20 @@ public class ProgramState {
         executionStack.push(originalProgram);
     }
 
+    public ProgramState(IStatement originalProgram, IStack<IStatement> executionStack, IDictionary<String, Integer> symTable, IList<Integer> out, IFileTable<Integer, FileData> fileTable, IHeap<Integer, Integer> heap, int id) {
+        this.originalProgram = originalProgram;
+        this.executionStack = executionStack;
+        this.symTable = symTable;
+        this.out = out;
+        this.fileTable = fileTable;
+        this.heap = heap;
+        this.id = id;
+    }
+
     @Override
     public String toString() {
         StringBuilder builder = new StringBuilder();
+        builder.append("StateId:").append(id).append('\n');
         builder.append("ExecutionStack:");
 
         for (IStatement statement : executionStack.getAll()) {
@@ -107,5 +119,15 @@ public class ProgramState {
 
     public void setHeap(IHeap<Integer, Integer> heap) {
         this.heap = heap;
+    }
+
+    public ProgramState oneStep() {
+        if (executionStack.isEmpty()) throw new StatementExecutionError("Execution Stack is empty");
+        IStatement currentStatement = executionStack.pop();
+        return currentStatement.execute(this);
+    }
+
+    public boolean isNotCompleted(){
+        return !executionStack.isEmpty();
     }
 }
