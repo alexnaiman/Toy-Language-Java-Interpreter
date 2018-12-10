@@ -19,7 +19,7 @@ public class PrintStatement implements IStatement {
         IDictionary<String, Integer> symTable = state.getSymTable();
         int value = expression.eval(symTable, state.getHeap());
         out.add(value);
-        return state;
+        return null;
     }
 
     public String toString() {

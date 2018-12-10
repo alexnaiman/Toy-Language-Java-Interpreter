@@ -20,7 +20,7 @@ public class NewStatement implements IStatement {
         IHeap<Integer, Integer> heap = state.getHeap();
         int id = heap.add(value);
         state.getSymTable().setValue(varName, id);
-        return state;
+        return null;
     }
 
     @Override

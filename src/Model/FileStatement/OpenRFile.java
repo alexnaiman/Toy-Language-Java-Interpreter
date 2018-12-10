@@ -38,7 +38,7 @@ public class OpenRFile implements IStatement {
         int id = NumberGenerator.getId();
         fileTable.add(id, new FileData(fileName, reader));
         symTable.setValue(varName, id);
-        return state;
+        return null;
     }
 
     @Override

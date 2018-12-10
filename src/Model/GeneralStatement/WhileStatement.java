@@ -27,7 +27,7 @@ public class WhileStatement implements IStatement {
             stack.push(new WhileStatement(expression, statement));
             stack.push(statement);
         }
-        return state;
+        return null;
     }
 
     @Override

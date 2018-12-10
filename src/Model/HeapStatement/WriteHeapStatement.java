@@ -25,7 +25,7 @@ public class WriteHeapStatement implements IStatement {
         if (!heap.exists(id))
             throw new HeapException("Invalid heap address");
         heap.replace(id, value);
-        return state;
+        return null;
     }
 
     @Override

@@ -150,6 +150,17 @@ public class Main {
         repo9.add(prg9);
         Controller ctrl9 = new Controller(repo9);
 
+        IStack<IStatement> ExeStack10 = new CustomStack<>();
+        IDictionary<String, Integer> SymTable10 = new CustomDictionary<>();
+        IList<Integer> Output10 = new CustomList<>();
+        IFileTable<Integer, FileData> fileTable10  = new FileTable<>();
+        IHeap<Integer, Integer> heap10 = new CustomHeap<>(new IntHeapKeyGenerator());
+
+        IStatement ex10 = new CompoundStatement(new AssignmentStatement("v", new ConstantExpression(10)), new CompoundStatement(new NewStatement("a",new ConstantExpression(22)), new CompoundStatement(new ForkStatement(new CompoundStatement(new WriteHeapStatement("a",new ConstantExpression(30)),new CompoundStatement(new AssignmentStatement("v",new ConstantExpression(32)), new CompoundStatement(new PrintStatement(new VariableExpression("v")),new PrintStatement(new ReadHeapExpression("a")))))),new CompoundStatement(new PrintStatement(new VariableExpression("v")), new PrintStatement(new ReadHeapExpression("a"))))));
+        ProgramState prg10 = new ProgramState(ex10, ExeStack10, SymTable10, Output10, fileTable10, heap10);
+        Repository repo10 = new Repository("");
+        repo10.add(prg10);
+        Controller ctrl10 = new Controller(repo10);
 
         TextMenu menu = new TextMenu();
         menu.addCommand(new ExitCommand("0", "exit"));
@@ -160,6 +171,7 @@ public class Main {
         menu.addCommand(new RunCommand("5", ex7.toString(), ctrl7));
         menu.addCommand(new RunCommand("6", ex8.toString(), ctrl8));
         menu.addCommand(new RunCommand("7", ex9.toString(), ctrl9));
+        menu.addCommand(new RunCommand("8", ex10.toString(), ctrl10));
         menu.show();
 
     }

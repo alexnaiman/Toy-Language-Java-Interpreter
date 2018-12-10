@@ -36,7 +36,7 @@ public class ReadFile implements IStatement {
             throw new FileException("Cannot read line");
         }
 
-        int value = 0;
+        int value;
         try {
             if (line != null) {
                 value = Integer.parseInt(line);
@@ -47,7 +47,7 @@ public class ReadFile implements IStatement {
             throw new FileException("Cannot read number! Wrong format");
         }
         symTable.setValue(varName, value);
-        return state;
+        return null;
     }
 
     @Override

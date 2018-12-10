@@ -19,7 +19,7 @@ public class AssignmentStatement implements IStatement {
         IDictionary<String, Integer> symTable = state.getSymTable();
         int value = expression.eval(symTable, state.getHeap());
         symTable.setValue(id, value);
-        return state;
+        return null;
     }
 
     @Override
