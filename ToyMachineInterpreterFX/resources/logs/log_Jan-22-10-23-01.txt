@@ -1,0 +1,42 @@
+StateId:22
+ExecutionStack:
+	print(readHeap(v2));
+SymTable:
+	cnt::=7
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->300
+3->4
+FileTable:	
+BarrierTable:	<7,3->{21,20,22,}
+>;
+Out:
+	null
+	4
+
+################
+StateId:22
+ExecutionStack:
+SymTable:
+	cnt::=7
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->300
+3->4
+FileTable:	
+BarrierTable:	<7,3->{21,20,22,}
+>;
+Out:
+	null
+	4
+	300
+
+################

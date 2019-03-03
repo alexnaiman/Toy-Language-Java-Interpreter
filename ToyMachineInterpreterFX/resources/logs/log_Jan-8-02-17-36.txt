@@ -1,0 +1,31 @@
+StateId:1
+ExecutionStack:
+	readFile(var_f,var_c)
+	print(var_c);
+	closeRFile(var_f)
+SymTable:
+	var_f::=0
+	var_c::=15
+
+HEAP: 
+
+FileTable:	<0,test.in>;
+Out:
+	15
+
+################
+StateId:1
+ExecutionStack:
+	print(var_c);
+	closeRFile(var_f)
+SymTable:
+	var_f::=0
+	var_c::=50
+
+HEAP: 
+
+FileTable:	<0,test.in>;
+Out:
+	15
+
+################

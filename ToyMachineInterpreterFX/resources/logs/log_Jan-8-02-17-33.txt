@@ -1,0 +1,64 @@
+StateId:1
+ExecutionStack:
+	[print(var_c);;
+	[if(var_c) then([readFile(var_f,var_c);
+	print(var_c);];) else(print(var_c););;
+	closeRFile(var_f)];];
+SymTable:
+	var_f::=0
+	var_c::=15
+
+HEAP: 
+
+FileTable:	<0,test.in>;
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	print(var_c);
+	[if(var_c) then([readFile(var_f,var_c);
+	print(var_c);];) else(print(var_c););;
+	closeRFile(var_f)];
+SymTable:
+	var_f::=0
+	var_c::=15
+
+HEAP: 
+
+FileTable:	<0,test.in>;
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	print(var_c);
+	[if(var_c) then([readFile(var_f,var_c);
+	print(var_c);];) else(print(var_c););;
+	closeRFile(var_f)];
+SymTable:
+	var_f::=0
+	var_c::=15
+
+HEAP: 
+
+FileTable:	<0,test.in>;
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	[if(var_c) then([readFile(var_f,var_c);
+	print(var_c);];) else(print(var_c););;
+	closeRFile(var_f)];
+SymTable:
+	var_f::=0
+	var_c::=15
+
+HEAP: 
+
+FileTable:	<0,test.in>;
+Out:
+	15
+
+################

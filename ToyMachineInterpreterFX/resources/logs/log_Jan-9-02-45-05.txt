@@ -1,0 +1,63 @@
+StateId:3
+ExecutionStack:
+	print(readHeap(a));
+	a=0;
+SymTable:
+	a::=2
+	v::=1
+
+HEAP: 
+1->20
+2->30
+FileTable:	
+Out:
+	2
+
+################
+StateId:3
+ExecutionStack:
+	a=0;
+SymTable:
+	a::=2
+	v::=1
+
+HEAP: 
+1->20
+2->30
+FileTable:	
+Out:
+	2
+	30
+
+################
+StateId:3
+ExecutionStack:
+	a=0;
+SymTable:
+	a::=2
+	v::=1
+
+HEAP: 
+1->20
+2->30
+FileTable:	
+Out:
+	2
+	30
+
+################
+StateId:3
+ExecutionStack:
+SymTable:
+	a::=0
+	v::=1
+
+HEAP: 
+1->20
+2->30
+FileTable:	
+Out:
+	2
+	30
+
+################

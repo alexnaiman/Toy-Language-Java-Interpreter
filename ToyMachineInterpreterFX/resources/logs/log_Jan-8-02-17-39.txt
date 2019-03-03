@@ -1,0 +1,29 @@
+StateId:1
+ExecutionStack:
+	closeRFile(var_f)
+SymTable:
+	var_f::=0
+	var_c::=50
+
+HEAP: 
+
+FileTable:	<0,test.in>;
+Out:
+	15
+	50
+
+################
+StateId:1
+ExecutionStack:
+SymTable:
+	var_f::=0
+	var_c::=50
+
+HEAP: 
+
+FileTable:	
+Out:
+	15
+	50
+
+################

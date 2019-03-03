@@ -1,0 +1,122 @@
+StateId:23
+ExecutionStack:
+	print(readHeap(v3));
+SymTable:
+	cnt::=8
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->3
+3->4
+FileTable:	
+BarrierTable:	<8,3->{24,23,25,}
+>;
+Out:
+
+################
+StateId:24
+ExecutionStack:
+	print(readHeap(v1));
+SymTable:
+	cnt::=8
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->3
+3->4
+FileTable:	
+BarrierTable:	<8,3->{24,23,25,}
+>;
+Out:
+
+################
+StateId:25
+ExecutionStack:
+	[WriteHeap(v2,readHeap(v2)*10);
+	[WriteHeap(v2,readHeap(v2)*10);
+	print(readHeap(v2));];];
+SymTable:
+	cnt::=8
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->3
+3->4
+FileTable:	
+BarrierTable:	<8,3->{24,23,25,}
+>;
+Out:
+
+################
+StateId:23
+ExecutionStack:
+SymTable:
+	cnt::=8
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->3
+3->4
+FileTable:	
+BarrierTable:	<8,3->{24,23,25,}
+>;
+Out:
+	null
+	4
+
+################
+StateId:24
+ExecutionStack:
+SymTable:
+	cnt::=8
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->3
+3->4
+FileTable:	
+BarrierTable:	<8,3->{24,23,25,}
+>;
+Out:
+	null
+	4
+
+################
+StateId:25
+ExecutionStack:
+	WriteHeap(v2,readHeap(v2)*10)
+	[WriteHeap(v2,readHeap(v2)*10);
+	print(readHeap(v2));];
+SymTable:
+	cnt::=8
+	v1::=1
+	v2::=2
+	v3::=3
+
+HEAP: 
+1->20
+2->3
+3->4
+FileTable:	
+BarrierTable:	<8,3->{24,23,25,}
+>;
+Out:
+	null
+	4
+
+################

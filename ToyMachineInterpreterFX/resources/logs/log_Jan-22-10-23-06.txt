@@ -1,0 +1,96 @@
+StateId:23
+ExecutionStack:
+	New(v1,2)
+	[New(v2,3);
+	[New(v3,4);
+	[newBarrier( cnt, readHeap(v2));
+	[fork([await( cnt );
+	[WriteHeap(v1,readHeap(v1)*10);
+	print(readHeap(v1));];];);
+	[fork([await( cnt );
+	[WriteHeap(v2,readHeap(v2)*10);
+	[WriteHeap(v2,readHeap(v2)*10);
+	print(readHeap(v2));];];];);
+	[await( cnt );
+	print(readHeap(v3));];];];];];];
+SymTable:
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:23
+ExecutionStack:
+	[New(v2,3);
+	[New(v3,4);
+	[newBarrier( cnt, readHeap(v2));
+	[fork([await( cnt );
+	[WriteHeap(v1,readHeap(v1)*10);
+	print(readHeap(v1));];];);
+	[fork([await( cnt );
+	[WriteHeap(v2,readHeap(v2)*10);
+	[WriteHeap(v2,readHeap(v2)*10);
+	print(readHeap(v2));];];];);
+	[await( cnt );
+	print(readHeap(v3));];];];];];];
+SymTable:
+	v1::=1
+
+HEAP: 
+1->2
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:23
+ExecutionStack:
+	[New(v2,3);
+	[New(v3,4);
+	[newBarrier( cnt, readHeap(v2));
+	[fork([await( cnt );
+	[WriteHeap(v1,readHeap(v1)*10);
+	print(readHeap(v1));];];);
+	[fork([await( cnt );
+	[WriteHeap(v2,readHeap(v2)*10);
+	[WriteHeap(v2,readHeap(v2)*10);
+	print(readHeap(v2));];];];);
+	[await( cnt );
+	print(readHeap(v3));];];];];];];
+SymTable:
+	v1::=1
+
+HEAP: 
+1->2
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:23
+ExecutionStack:
+	New(v2,3)
+	[New(v3,4);
+	[newBarrier( cnt, readHeap(v2));
+	[fork([await( cnt );
+	[WriteHeap(v1,readHeap(v1)*10);
+	print(readHeap(v1));];];);
+	[fork([await( cnt );
+	[WriteHeap(v2,readHeap(v2)*10);
+	[WriteHeap(v2,readHeap(v2)*10);
+	print(readHeap(v2));];];];);
+	[await( cnt );
+	print(readHeap(v3));];];];];];
+SymTable:
+	v1::=1
+
+HEAP: 
+1->2
+FileTable:	
+BarrierTable:	
+Out:
+
+################

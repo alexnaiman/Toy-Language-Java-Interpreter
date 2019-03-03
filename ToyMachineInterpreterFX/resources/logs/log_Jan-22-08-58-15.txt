@@ -1,0 +1,30 @@
+StateId:1
+ExecutionStack:
+	print(200);
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+Out:
+	100
+
+################
+StateId:1
+ExecutionStack:
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+Out:
+	100
+	200
+
+################

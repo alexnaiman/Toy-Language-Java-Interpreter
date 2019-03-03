@@ -1,0 +1,72 @@
+#################################
+ExecutionSack: 
+a=2-2;, [if(a) then v=3; else v=5;;
+Print(v)]
+;, 
+
+Symbol Table:
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+[if(a) then v=3; else v=5;;
+Print(v)]
+;, 
+
+Symbol Table:
+a-->0
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+if(a) then v=3; else v=5;, Print(v), 
+
+Symbol Table:
+a-->0
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+v=3;, Print(v), 
+
+Symbol Table:
+a-->0
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+Print(v), 
+
+Symbol Table:
+a-->0
+v-->3
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+
+
+Symbol Table:
+a-->0
+v-->3
+
+FileTable:
+
+Output:
+3
+

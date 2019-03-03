@@ -1,0 +1,18 @@
+StateId:7
+ExecutionStack:
+	[v=10;;
+	[New(a,22);
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];];];
+SymTable:
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################

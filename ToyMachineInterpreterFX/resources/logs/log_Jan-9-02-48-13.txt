@@ -1,0 +1,140 @@
+StateId:2
+ExecutionStack:
+	WriteHeap(a,30)
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	print(readHeap(a));
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+
+################
+StateId:2
+ExecutionStack:
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+
+################
+StateId:1
+ExecutionStack:
+	print(readHeap(a));
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+
+################
+StateId:2
+ExecutionStack:
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+
+################
+StateId:1
+ExecutionStack:
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+	30
+
+################
+StateId:2
+ExecutionStack:
+	v=32;
+	[print(v);;
+	print(readHeap(a));];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+	30
+
+################
+StateId:2
+ExecutionStack:
+	v=32;
+	[print(v);;
+	print(readHeap(a));];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+	30
+
+################
+StateId:2
+ExecutionStack:
+	[print(v);;
+	print(readHeap(a));];
+SymTable:
+	a::=1
+	v::=32
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+	30
+
+################

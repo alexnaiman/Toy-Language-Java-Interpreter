@@ -1,0 +1,64 @@
+StateId:1
+ExecutionStack:
+	print(100);
+	print(200);
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	print(200);
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+	100
+
+################
+StateId:1
+ExecutionStack:
+	print(200);
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+	100
+
+################
+StateId:1
+ExecutionStack:
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+	100
+	200
+
+################

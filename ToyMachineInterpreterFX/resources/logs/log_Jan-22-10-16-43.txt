@@ -1,0 +1,80 @@
+StateId:2
+ExecutionStack:
+	[c=5;;
+	switch( a*10) 
+{case:( b*c ) [print(a');;
+	print(b);];)
+(case:( 10 ) [print(100);;
+	print(200);];)
+(default: print(300); )}];
+SymTable:
+	a::=1
+	b::=2
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:2
+ExecutionStack:
+	c=5;
+	switch( a*10) 
+{case:( b*c ) [print(a');;
+	print(b);];)
+(case:( 10 ) [print(100);;
+	print(200);];)
+(default: print(300); )}
+SymTable:
+	a::=1
+	b::=2
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:2
+ExecutionStack:
+	c=5;
+	switch( a*10) 
+{case:( b*c ) [print(a');;
+	print(b);];)
+(case:( 10 ) [print(100);;
+	print(200);];)
+(default: print(300); )}
+SymTable:
+	a::=1
+	b::=2
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:2
+ExecutionStack:
+	switch( a*10) 
+{case:( b*c ) [print(a');;
+	print(b);];)
+(case:( 10 ) [print(100);;
+	print(200);];)
+(default: print(300); )}
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################

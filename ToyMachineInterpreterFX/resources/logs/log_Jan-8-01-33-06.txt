@@ -1,0 +1,28 @@
+StateId:1
+ExecutionStack:
+	While((a<0)){[print(a);;
+	a=a+1;];}
+SymTable:
+	a::=-2
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	[print(a);;
+	a=a+1;];
+	While((a<0)){[print(a);;
+	a=a+1;];}
+SymTable:
+	a::=-2
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################

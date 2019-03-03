@@ -1,0 +1,15 @@
+StateId:1
+ExecutionStack:
+SymTable:
+	a::=0
+	v::=1
+
+HEAP: 
+1->20
+2->30
+FileTable:	
+Out:
+	2
+	30
+
+################

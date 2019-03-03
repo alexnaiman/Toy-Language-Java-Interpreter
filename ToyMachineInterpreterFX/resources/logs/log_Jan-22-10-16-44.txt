@@ -1,0 +1,37 @@
+StateId:2
+ExecutionStack:
+	switch( a*10) 
+{case:( b*c ) [print(a');;
+	print(b);];)
+(case:( 10 ) [print(100);;
+	print(200);];)
+(default: print(300); )}
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:2
+ExecutionStack:
+	if((a*10==b*c)) then([print(a');;
+	print(b);];) else(if((a*10==10)) then([print(100);;
+	print(200);];) else(print(300);););
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################

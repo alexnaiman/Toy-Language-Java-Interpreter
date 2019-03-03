@@ -1,0 +1,330 @@
+StateId:7
+ExecutionStack:
+	v=10;
+	[New(a,22);
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];];
+SymTable:
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	v=10;
+	[New(a,22);
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];];
+SymTable:
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	[New(a,22);
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];];
+SymTable:
+	v::=10
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	[New(a,22);
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];];
+SymTable:
+	v::=10
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	New(a,22)
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	v::=10
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	New(a,22)
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	v::=10
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	[fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];);
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];)
+	[print(v);;
+	print(readHeap(a));];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	fork([WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];)
+	[print(v);;
+	print(readHeap(a));];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	[print(v);;
+	print(readHeap(a));];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:8
+ExecutionStack:
+	[WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	[print(v);;
+	print(readHeap(a));];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:8
+ExecutionStack:
+	[WriteHeap(a,30);
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	print(v);
+	print(readHeap(a));
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:8
+ExecutionStack:
+	WriteHeap(a,30)
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	print(v);
+	print(readHeap(a));
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:8
+ExecutionStack:
+	WriteHeap(a,30)
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->22
+FileTable:	
+Out:
+
+################
+StateId:7
+ExecutionStack:
+	print(readHeap(a));
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+
+################
+StateId:8
+ExecutionStack:
+	[v=32;;
+	[print(v);;
+	print(readHeap(a));];];
+SymTable:
+	a::=1
+	v::=10
+
+HEAP: 
+1->30
+FileTable:	
+Out:
+	10
+
+################

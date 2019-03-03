@@ -1,0 +1,169 @@
+#################################
+ExecutionSack: 
+[[OpenFile(var_f,test.txt);
+readFile(var_f, var_c)];;
+[Print(var_c);
+if(var_c) then Print(0) else [readFile(var_f, var_c);
+Print(var_c)];];];, closeFile(var_f), 
+
+Symbol Table:
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+[OpenFile(var_f,test.txt);
+readFile(var_f, var_c)];, [Print(var_c);
+if(var_c) then Print(0) else [readFile(var_f, var_c);
+Print(var_c)];];, closeFile(var_f), 
+
+Symbol Table:
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+OpenFile(var_f,test.txt), readFile(var_f, var_c), [Print(var_c);
+if(var_c) then Print(0) else [readFile(var_f, var_c);
+Print(var_c)];];, closeFile(var_f), 
+
+Symbol Table:
+
+FileTable:
+
+Output:
+
+#################################
+ExecutionSack: 
+readFile(var_f, var_c), [Print(var_c);
+if(var_c) then Print(0) else [readFile(var_f, var_c);
+Print(var_c)];];, closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+
+#################################
+ExecutionSack: 
+[Print(var_c);
+if(var_c) then Print(0) else [readFile(var_f, var_c);
+Print(var_c)];];, closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+var_c-->15
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+
+#################################
+ExecutionSack: 
+Print(var_c), if(var_c) then Print(0) else [readFile(var_f, var_c);
+Print(var_c)];, closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+var_c-->15
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+
+#################################
+ExecutionSack: 
+if(var_c) then Print(0) else [readFile(var_f, var_c);
+Print(var_c)];, closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+var_c-->15
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+15
+
+#################################
+ExecutionSack: 
+[readFile(var_f, var_c);
+Print(var_c)];, closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+var_c-->15
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+15
+
+#################################
+ExecutionSack: 
+readFile(var_f, var_c), Print(var_c), closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+var_c-->15
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+15
+
+#################################
+ExecutionSack: 
+Print(var_c), closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+var_c-->50
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+15
+
+#################################
+ExecutionSack: 
+closeFile(var_f), 
+
+Symbol Table:
+var_f-->1
+var_c-->50
+
+FileTable:
+1-->Toy_Language_CS_Interpreter.Model.Statement.FileStatement.FileData
+
+Output:
+15
+50
+
+#################################
+ExecutionSack: 
+
+
+Symbol Table:
+var_f-->1
+var_c-->50
+
+FileTable:
+
+Output:
+15
+50
+

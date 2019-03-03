@@ -1,0 +1,21 @@
+#################################
+ExecutionSack: 
+v=2;, Print(v), 
+Symbol Table:
+FileTable:
+Output:
+#################################
+ExecutionSack: 
+Print(v), 
+Symbol Table:
+v-->2
+FileTable:
+Output:
+#################################
+ExecutionSack: 
+
+Symbol Table:
+v-->2
+FileTable:
+Output:
+2

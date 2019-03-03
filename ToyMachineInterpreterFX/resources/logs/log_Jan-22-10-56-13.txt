@@ -1,0 +1,35 @@
+StateId:1
+ExecutionStack:
+	if((a*10==b*c)) then([print(a);;
+	print(b);];) else(if((a*10==10)) then([print(100);;
+	print(200);];) else(print(300);););
+	print(300);
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	[print(a);;
+	print(b);];
+	print(300);
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################

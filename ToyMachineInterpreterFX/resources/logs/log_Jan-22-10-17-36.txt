@@ -1,0 +1,32 @@
+StateId:1
+ExecutionStack:
+	[print(a');;
+	print(b);];
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################
+StateId:1
+ExecutionStack:
+	print(a');
+	print(b);
+SymTable:
+	a::=1
+	b::=2
+	c::=5
+
+HEAP: 
+
+FileTable:	
+BarrierTable:	
+Out:
+
+################

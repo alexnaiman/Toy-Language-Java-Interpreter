@@ -1,0 +1,68 @@
+StateId:3
+ExecutionStack:
+	[v=10;;
+	[New(v,20);
+	[New(a,22);
+	[WriteHeap(a,30);
+	[print(a);;
+	[print(readHeap(a));;
+	a=0;];];];];];];
+SymTable:
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:3
+ExecutionStack:
+	v=10;
+	[New(v,20);
+	[New(a,22);
+	[WriteHeap(a,30);
+	[print(a);;
+	[print(readHeap(a));;
+	a=0;];];];];];
+SymTable:
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:3
+ExecutionStack:
+	v=10;
+	[New(v,20);
+	[New(a,22);
+	[WriteHeap(a,30);
+	[print(a);;
+	[print(readHeap(a));;
+	a=0;];];];];];
+SymTable:
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
+StateId:3
+ExecutionStack:
+	[New(v,20);
+	[New(a,22);
+	[WriteHeap(a,30);
+	[print(a);;
+	[print(readHeap(a));;
+	a=0;];];];];];
+SymTable:
+	v::=10
+
+HEAP: 
+
+FileTable:	
+Out:
+
+################
